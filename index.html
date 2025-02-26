@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>Greccos Gym | Gimnasio en Cali</title>
+    <meta name="description" content="Greccos Gym es un centro de entrenamiento en Cali que ofrece un ambiente ideal para el fitness, con equipos de última generación y clases dirigidas para mejorar tu bienestar físico.">
+    <link rel="icon" href="../images/logo-donde-seria.ico">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "name": "Greccos Gym",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Av. 3 Nte. #108, Prados Norte",
+                "addressLocality": "Cali",
+                "addressRegion": "Valle del Cauca",
+                "postalCode": "760010",
+                "addressCountry": "CO"
+            },
+            "telephone": "+57 317 6207618",
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                    ],
+                    "opens": "06:00",
+                    "closes": "21:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Saturday",
+                    "opens": "08:00",
+                    "closes": "14:00"
+                }
+            ],
+            "description": "Greccos Gym es un centro de entrenamiento en Cali que ofrece un ambiente ideal para el fitness, con equipos de última generación y clases dirigidas para mejorar tu bienestar físico.",
+            "sameAs": [
+                "https://www.facebook.com/GrecosFitnessGym/?locale=es_LA",
+                "https://www.instagram.com/greccosfitnessgym/"
+            ],
+            "priceRange": "$$"
+        }
+        </script>
+        
+<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRSFF9BE24"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KRSFF9BE24');
+</script>
+        <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+        <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+        <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <!-- APP CSS -->
+    <link rel="stylesheet" href="../grid.css">
+    <link rel="stylesheet" href="../360.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/virtual-tour-plugin/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/gallery-plugin/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/plan-plugin/index.css" />
+    <!-- Añade esta línea junto con tus otros CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/visible-range-plugin/index.css" />
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Leaflet CSS para el plugin de mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+</head>
+
+
+
+<body>
+
+        <!-- NAV -->
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="https://www.dondeseria.com/" class="logo">
+                    <i class='bx bx-webcam bx-tada main-color'></i>DÓNDE<span class="main-color"> SERÍA</span>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="https://www.dondeseria.com/index.html">Inicio</a></li>
+                    <li><a href="https://www.dondeseria.com/index.html">Restaurantes</a></li>
+                    <li><a href="https://www.dondeseria.com/index.html">Gyms</a></li>
+                    <li><a href="https://www.dondeseria.com/blogs/index.html">Blogs</a></li>
+                    <li><a href="https://www.dondeseria.com/index.html">Contacto</a></li>
+                  </ul>
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAV -->
+    
+    <div class="global-container2">
+        <div class="header-container2">
+            <!-- Contenido del nuevo div -->
+            <div class="header-content2">
+                <!-- Aquí va el contenido del nuevo div (similar al ancho de los hijos de side-panel) -->
+                <h1>Greccos Gym | Gimnasio en Cali</h1>
+            </div>
+        </div>
+        <div class="restaurantemadre">
+            <div id="viewer360">
+                <div class="niveles">
+                    <p style="text-align: center; padding-left: 2px; padding-right: 2px; margin: 0; color: white;">Selecciona<br>el piso</p>
+                    <button id="btn-piso-1" class="nivel-boton activo" title="Primer Piso" onclick="changeFloor(1)">1</button>
+                    <button id="btn-piso-2" class="nivel-boton" title="Segundo Piso" onclick="changeFloor(2)">3</button>
+                    <button id="btn-piso-2" class="nivel-boton" title="Segundo Piso" onclick="changeFloor(3)">4</button>
+
+                </div>
+                <div class="whatsapp-btn" style="display: flex; justify-content: center; align-items: center;">
+                    <button id="whatsapp-button">
+                      WhatsApp <i class="bx bxl-whatsapp bx-tada" style="font-size: 20px;"></i>
+                    </button>
+
+                  </div>                  
+            </div>
+            <div class="side-panel2">
+                <div class="logo-container2">
+                    <img src="./greccos-logo-gym.png" alt="Logo del Gimnasio Greccos Gyms" class="logo" style="max-width: 35% !important;">
+                </div>
+                <div class="text-container2">
+                    <h2>Av. 3 Nte. #108, Prados Norte</h2>
+                    <h3 class="text">
+                        🏋️‍♂️ Greccos es un templo de fuerza y determinación, donde el entrenamiento con fierros forja cuerpo y mente. 💪🔥 Disfruta de una vista única de Cali desde el 3er y 4to piso, con acompañamiento semi personalizado y apoyo psicológico profesional. ¡Vive la experiencia! 🏢🌇✨ </br> ‎ 
+                    </h3>
+                </div>
+                <div class="buttons-container2">
+                    <button class="btn1" onclick="openInNewTab('https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYPDIGCAMQRRg8MgYIBBBFGD0yBggFEC4YQNIBCDE3ODVqMGo0qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=co&sa=X&geocode=KX1sYkYkpjCOMdKvIluE8crj&daddr=Autopista+Cali+-+Yumbo+%23130,+Prados+Norte,+Cali,+Valle+del+Cauca')">Como llegar</button>
+                    <button class="btn2" onclick="openInNewTab('https://www.instagram.com/greccosfitnessgym/')">Instagram</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+        <!-- FOOTER SECTION -->
+        <footer class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 col-md-6 col-sm-12">
+                        <div class="content">
+                            <a href="#" class="logo">
+                                <i class='bx bx-webcam bx-tada main-color'></i>DÓNDE<span class="main-color"> SERÍA</span>
+                            </a>
+                            <p>
+                                Nos especializamos en capturar experiencias únicas con recorridos 360° en restaurantes, gimnasios, bares y más. Nuestro objetivo es promocionar locales y negocios para que lleguen a más personas, mostrando su esencia de una manera inmersiva y atractiva. ¡Explora, conoce y vive lo mejor de cada lugar con nosotros! 🌍✨
+                            </p>
+                            <div class="social-list">
+                                <a href="https://www.instagram.com/cusig.co/" class="social-item">
+                                    <i class="bx bxl-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER SECTION -->
+    
+        <!-- COPYRIGHT SECTION -->
+        <div class="copyright">
+            Copyright 2025 <a href="https://www.youtube.com/channel/UCnNgtK4tGlWcceXVzoyTg8Q" target="_blank">
+                CUSIG S A S</a>
+        </div>
+        <!-- END COPYRIGHT SECTION -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- OWL CAROUSEL -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+        <!-- APP SCRIPT -->
+        <script src="../app.js"></script>
+        <script>
+    function openInNewTab(url) {
+        window.open(url, '_blank').focus();
+    }
+</script>
+<script>
+    const whatsappButton = document.getElementById('whatsapp-button');
+  
+    whatsappButton.addEventListener('click', function(e) {
+      e.preventDefault(); // Evita el comportamiento por defecto
+  
+      // Función de redirección a WhatsApp
+      function redirigir() {
+        window.location.href = 'https://wa.link/z2zlsq'; // Sustituye 'tuNumero' por el número deseado
+      }
+  
+      // Verifica si gtag está disponible y envía el evento
+      if (typeof gtag === 'function') {
+        gtag('event', 'click', {
+          'event_category': 'Contacto',
+          'event_label': 'WhatsApp Greccos Gym',
+          'event_callback': redirigir
+        });
+      } else {
+        // Si gtag no está disponible, redirige inmediatamente
+        redirigir();
+      }
+  
+      // Fallback en caso de que el callback no se dispare en un tiempo razonable
+      setTimeout(redirigir, 1000);
+    });
+  </script>
+  
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+                "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.module.js",
+                "@photo-sphere-viewer/virtual-tour-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/virtual-tour-plugin/index.module.js",
+                "@photo-sphere-viewer/markers-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.module.js",
+                "@photo-sphere-viewer/gallery-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/gallery-plugin/index.module.js",
+                "@photo-sphere-viewer/plan-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/plan-plugin/index.module.js",
+                "@photo-sphere-viewer/visible-range-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/visible-range-plugin/index.module.js",
+                "@photo-sphere-viewer/autorotate-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/autorotate-plugin/index.module.js",
+                "leaflet": "https://unpkg.com/leaflet@1.9.4/dist/leaflet-src.esm.js"
+            }
+        }
+    </script>
+    <script type="module">
+        import { Viewer } from '@photo-sphere-viewer/core';
+        import { VirtualTourPlugin } from '@photo-sphere-viewer/virtual-tour-plugin';
+        import { GalleryPlugin } from '@photo-sphere-viewer/gallery-plugin';
+        import { MarkersPlugin } from '@photo-sphere-viewer/markers-plugin';
+        import { VisibleRangePlugin } from '@photo-sphere-viewer/visible-range-plugin';
+        import * as PlanPlugin from '@photo-sphere-viewer/plan-plugin';
+        import { AutorotatePlugin } from '@photo-sphere-viewer/autorotate-plugin';
+
+    
+        const baseUrl = '../fotos/';
+    
+        const pisos = {
+            1: [
+                {
+                    id: 'nodo1',
+                    panorama: `${baseUrl}greccos-gym-entrada.jpg`,
+                    thumbnail: `${baseUrl}greccos-gym-entrada.jpg`,
+                    name: 'Entrada',
+                    caption: 'Entrada a Greccos Gym',
+                    links: [{ nodeId: 'nodo2', position:  {yaw: 2.243820386376142, pitch: -0.20662469605095835} },
+                    ],
+                    sphereCorrection: { pan: '220deg' },
+                },
+                {
+                    id: 'nodo2',
+                    panorama: `${baseUrl}recepcion-graccos-gym.jpg`,
+                    thumbnail: `${baseUrl}recepcion-graccos-gym.jpg`,
+                    name: 'Entrada',
+                    caption: 'Entrada a Greccos Gym',
+                    links: [
+{ nodeId: 'nodo1', position:  {yaw: 0.00940493621652243, pitch: -0.3094468469214755} },
+                        
+                    ],
+                    sphereCorrection: { pan: '0deg' },
+                },
+                
+            ],
+            2: [
+            {
+                    id: 'nodo3',
+                    panorama: `${baseUrl}tercer-piso-1-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}tercer-piso-1-greccos-gym.jpg`,
+                    name: 'Tercer Piso',
+                    caption: 'Tercer Piso Greccos Gym',
+                    links: [                
+                    { nodeId: 'nodo6', position: {yaw: 5.883979388970467, pitch: -0.27229468727450046} },     
+                    ],
+                    sphereCorrection: { pan: '200deg',roll: '-2deg' },
+                },
+                {
+                    id: 'nodo4',
+                    panorama: `${baseUrl}tercer-piso-2-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}tercer-piso-2-greccos-gym.jpg`,
+                    name: 'Tercer Piso',
+                    caption: 'Tercer Piso Greccos Gym',
+                    links: [    
+                    { nodeId: 'nodo3', position:  {yaw: 6.202090096512095, pitch: -0.5754679897457073} },
+                    { nodeId: 'nodo5', position:  {yaw: 2.956373325542899, pitch: -0.3453935867850024} }, 
+                    { nodeId: 'nodo9', position:  {yaw: 4.526581122090889, pitch: -0.29371032370616845} },
+                
+                    ],
+                    sphereCorrection: { pan: '270deg' },
+                },
+            {
+                    id: 'nodo5',
+                    panorama: `${baseUrl}tercer-piso-3-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}tercer-piso-3-greccos-gym.jpg`,
+                    name: 'Tercer Piso',
+                    caption: 'Tercer Piso Greccos Gym',
+                    links: [     
+                    { nodeId: 'nodo4', position:  {yaw: 6.200631211298759, pitch: -0.6569515561797701} },
+{ nodeId: 'nodo7', position:  {yaw: 4.639531186193161, pitch: -0.19116058874464903} },
+                
+                    ],
+                    sphereCorrection: { pan: '270deg',roll: '-5deg' },
+                },
+            {
+                    id: 'nodo6',
+                    panorama: `${baseUrl}tercer-piso-4-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}tercer-piso-4-greccos-gym.jpg`,
+                    name: 'Tercer Piso',
+                    caption: 'Tercer Piso Greccos Gym',
+                    links: [
+                    { nodeId: 'nodo3', position: {yaw: 1.1987124116217827, pitch: -0.6117446347951652} },
+                    { nodeId: 'nodo4', position:  {yaw: 3.192646718434219, pitch: -0.406730336591989} },
+                    { nodeId: 'nodo8', position:  {yaw: 4.860537282556102, pitch: -0.16474712144383297} },
+                    ],
+                    sphereCorrection: { pan: '270deg' },
+                },
+            {
+                    id: 'nodo7',
+                    panorama: `${baseUrl}tercer-piso-5-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}tercer-piso-5-greccos-gym.jpg`,
+                    name: 'Tercer Piso',
+                    caption: 'Tercer Piso Greccos Gym',
+                    links: [    
+                    { nodeId: 'nodo5', position:  {yaw: 4.552494575231675, pitch: -0.09862714292918184}},
+{ nodeId: 'nodo10', position:  {yaw: 1.4956061897870072, pitch: -0.3472660077673466}},
+{ nodeId: 'nodo9', position:  {yaw: 3.1060253413409984, pitch: -0.28272855860348667}},                 
+                    ],
+                    sphereCorrection: { pan: '270deg',roll: '-2deg' },
+                },
+                {
+                    id: 'nodo8',
+                    panorama: `${baseUrl}tercer-piso-6-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}tercer-piso-6-greccos-gym.jpg`,
+                    name: 'Tercer Piso',
+                    caption: 'Tercer Piso Greccos Gym',
+                    links: [     
+                    { nodeId: 'nodo6', position:  {yaw: 3.589054562878862, pitch: -0.08183571729421368}},                      
+{ nodeId: 'nodo9', position:  {yaw: 4.641445912976132, pitch: -0.12603510397339068}},
+{ nodeId: 'nodo11', position:  {yaw: 5.840839952530403, pitch: -0.16421516033181538}},                
+                    ],
+                    sphereCorrection: { pan: '270deg',roll: '-2deg' },
+                },
+                {
+                    id: 'nodo9',
+                    panorama: `${baseUrl}tercer-piso-7-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}tercer-piso-7-greccos-gym.jpg`,
+                    name: 'Tercer Piso',
+                    caption: 'Tercer Piso Greccos Gym',
+                    links: [    
+                    { nodeId: 'nodo4', position:  {yaw: 5.189236824986888, pitch: -0.07676479609238429}},
+{ nodeId: 'nodo8', position:  {yaw: 3.6681183511703503, pitch: -0.22126552537699418}},
+{ nodeId: 'nodo7', position:  {yaw: 0.5184518092722875, pitch: -0.2706644063412744}},
+{ nodeId: 'nodo10', position:  {yaw: 1.6232080130991924, pitch: -0.020086236529194945}},
+
+{ nodeId: 'nodo11', position:  {yaw: 2.5073994959770496, pitch: -0.12434575596087027}},
+                                         
+                    ],
+                    sphereCorrection: { pan: '90deg',roll: '-2deg' },
+                },
+                {
+                    id: 'nodo10',
+                    panorama: `${baseUrl}tercer-piso-8-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}tercer-piso-8-greccos-gym.jpg`,
+                    name: 'Tercer Piso',
+                    caption: 'Tercer Piso Greccos Gym',
+                    links: [    
+            
+                    ],
+                    sphereCorrection: { pan: '90deg',roll: '-2deg' },
+                },
+                {
+                    id: 'nodo11',
+                    panorama: `${baseUrl}tercer-piso-9-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}tercer-piso-9-greccos-gym.jpg`,
+                    name: 'Tercer Piso',
+                    caption: 'Tercer Piso Greccos Gym',
+                    links: [          
+                    { nodeId: 'nodo8', position:  {yaw: 4.570118800065672, pitch: -0.32026527182517084}},
+                    { nodeId: 'nodo10', position:  {yaw: 5.980554621890677, pitch: -0.2891539635801976}},           
+                    ],
+                    sphereCorrection: { pan: '90deg',roll: '-2deg' },
+                },
+            ],
+            3: [
+            {
+                    id: 'nodo12',
+                    panorama: `${baseUrl}cuarto-piso-1-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}cuarto-piso-1-greccos-gym.jpg`,
+                    name: 'Cuarto Piso',
+                    caption: 'Cuarto Piso Greccos Gym',
+                    links: [   
+                    { nodeId: 'nodo13', position:  {yaw: 2.3372262135047466, pitch: -0.33837443811802137}},                
+                    ],
+                    sphereCorrection: { pan: '180deg' },
+                },
+                {
+                    id: 'nodo13',
+                    panorama: `${baseUrl}cuarto-piso-2-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}cuarto-piso-2-greccos-gym.jpg`,
+                    name: 'Cuarto Piso',
+                    caption: 'Cuarto Piso Greccos Gym',
+                    links: [   
+                    { nodeId: 'nodo12', position:  {yaw: 4.83192001500291, pitch: -0.2558002381491735}},   
+                    { nodeId: 'nodo14', position:  {yaw: 2.9941673099362065, pitch: -0.04395088079740228}},
+             
+                    ],
+                    sphereCorrection: { pan: '0deg' },
+                },
+                {
+                    id: 'nodo14',
+                    panorama: `${baseUrl}cuarto-piso-3-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}cuarto-piso-3-greccos-gym.jpg`,
+                    name: 'Cuarto Piso',
+                    caption: 'Cuarto Piso Greccos Gym',
+                    links: [   
+                    { nodeId: 'nodo13', position: {yaw: 0.07587526340236937, pitch: -0.2968826312397357}},   
+                    { nodeId: 'nodo15', position:  {yaw: 3.054338562252115, pitch: 0.0276842960377488}},
+                    { nodeId: 'nodo16', position:  {yaw: 2.008998363461132, pitch: -0.1766718554067248}},
+                    ],
+                    sphereCorrection: { pan: '0deg' },
+                },
+                {
+                    id: 'nodo15',
+                    panorama: `${baseUrl}cuarto-piso-4-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}cuarto-piso-4-greccos-gym.jpg`,
+                    name: 'Cuarto Piso',
+                    caption: 'Cuarto Piso Greccos Gym',
+                    links: [    
+                    { nodeId: 'nodo14', position:  {yaw: 3.054338562252115, pitch: 0.0276842960377488}},
+                    { nodeId: 'nodo16', position:  {yaw: 4.214433145595518, pitch: -0.15283634361630094}},
+                    ],
+                    sphereCorrection: { pan: '0deg' },
+                },
+                {
+                    id: 'nodo16',
+                    panorama: `${baseUrl}cuarto-piso-10-greccos-gym.jpg`,
+                    thumbnail: `${baseUrl}cuarto-piso-10-greccos-gym.jpg`,
+                    name: 'Cuarto Piso',
+                    caption: 'Cuarto Piso Greccos Gym',
+                    links: [   
+                    { nodeId: 'nodo14', position:  {yaw: 3.08944341495334, pitch: -0.18493625101864808}},
+
+{ nodeId: 'nodo15', position:  {yaw: 1.8214746022457151, pitch: -0.2142185002894963}}, 
+                    ],
+                    sphereCorrection: { pan: '0deg' },
+                },
+            ],
+        };
+    
+        let currentFloor = 1;
+    
+        const viewer = new Viewer({
+            container: document.querySelector('#viewer360'),
+            loadingImg: '../cusig2.gif',
+            touchmoveTwoFingers: false,
+            mousewheelCtrlKey: true,
+            defaultYaw: '130deg',
+            navbar: 'zoom move gallery caption fullscreen',
+            mousemoveSensitivity: 2, // Aumenta la sensibilidad del mouse (default es 1)
+            touchmoveSensitivity: 2, // Aumenta la sensibilidad del touch (default es 1)
+            defaultZoomLvl: 0,
+    
+            plugins: [
+                MarkersPlugin,
+                [
+                    GalleryPlugin,
+                    {
+                        thumbnailSize: { width: 100, height: 100 },
+                    },
+                ],
+                [
+                    VirtualTourPlugin,
+                    {
+                        positionMode: 'manual',
+                        renderMode: '3d',
+                        nodes: pisos[currentFloor],
+                        startNodeId: 'nodo1',
+                    },
+                ],
+                [
+                    PlanPlugin.PlanPlugin,
+                    {
+                        defaultZoom: 17,
+                        bearing: '0deg',
+                        coordinates: [-76.51773820873068,3.47668991096914],
+                        layers: [
+                            {
+                                name: 'OpenStreetMap',
+                                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                                attribution: '&copy; OpenStreetMap',
+                            },
+                        ],
+                        visibleOnLoad: false,
+                    },
+                ],
+                [
+                    VisibleRangePlugin,
+                    {
+                        // Configuración inicial vacía
+                    }
+                ],
+            ],
+        });
+    
+        window.changeFloor = function (floor) {
+            if (floor === currentFloor) return; // Si el piso ya está seleccionado, no hacer nada
+    
+            currentFloor = floor;
+    
+            // Obtener el plugin VirtualTourPlugin
+            const vtPlugin = viewer.getPlugin(VirtualTourPlugin);
+    
+            // Cambiar los nodos al conjunto del nuevo piso
+            vtPlugin.setNodes(pisos[floor]); // Actualiza los nodos del visor al nuevo piso
+    
+            // Cambiar al primer nodo del nuevo piso
+            vtPlugin.setCurrentNode(pisos[floor][0].id); // Establece el primer nodo del piso seleccionado
+    
+            // Actualizar la clase 'activo' en los botones
+            document.querySelectorAll('.nivel-boton').forEach((btn, index) => {
+                if (index + 1 === floor) {
+                    btn.classList.add('activo'); // Agregar la clase activo al botón seleccionado
+                } else {
+                    btn.classList.remove('activo'); // Eliminar la clase activo de los demás botones
+                }
+            });
+        };
+    
+
+
+    // Mantener el resto de los event listeners sin cambios
+    viewer.addEventListener('ready', () => {
+        console.log('The viewer is ready');
+
+        // Obtenemos el plugin
+        const vtPlugin = viewer.getPlugin(VirtualTourPlugin.VirtualTourPlugin);
+
+        // Log de la posición cada 2 segundos
+        setInterval(() => {
+          const position = viewer.getPosition();
+          console.log('Current Position:', {
+            yaw: position.yaw,
+            pitch: position.pitch
+          });
+      
+        }, 2000);
+
+        // Evento de clic: imprime yaw/pitch del clic
+        viewer.addEventListener('click', (e) => {
+          console.log('Click Coordinates:', { 
+            yaw: e.yaw, 
+            pitch: e.pitch 
+          });
+        });
+    });
+</script>
+</body>
+
+</html>
