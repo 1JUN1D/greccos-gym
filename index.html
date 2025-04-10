@@ -114,6 +114,15 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGQZPPCT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <div id="flyer-overlay">
+        <div class="flyer-content" onclick="redirectToPromo()">
+          <!-- Botón de cierre -->
+          <button class="close-flyer" onclick="closeFlyer(); event.stopPropagation()">×</button>
+          <!-- Aquí incluye tu flyer. Puedes usar una imagen o el contenido que desees -->
+          <img src="./flyer.jpeg" alt="Flyer Promocional" style="width: 100%; display: block;">
+        </div>
+      </div>
         <!-- NAV -->
     <div class="nav-wrapper">
         <div class="container">
@@ -196,7 +205,7 @@
                                 Nos especializamos en capturar experiencias únicas con recorridos 360° en restaurantes, gimnasios, bares y más. Nuestro objetivo es promocionar locales y negocios para que lleguen a más personas, mostrando su esencia de una manera inmersiva y atractiva. ¡Explora, conoce y vive lo mejor de cada lugar con nosotros! 🌍✨
                             </p>
                             <div class="social-list">
-                                <a href="https://www.instagram.com/cusig.co/" class="social-item">
+                                <a href="https://www.instagram.com/dondeseria/" class="social-item">
                                     <i class="bx bxl-instagram"></i>
                                 </a>
                             </div>
@@ -234,6 +243,25 @@
     // Redirige a la URL de WhatsApp sin enviar información a gtag
     window.location.href = 'https://wa.link/z2zlsq';
   });
+  </script>
+  <script>
+    // Función para cerrar el overlay manualmente
+    function closeFlyer() {
+      const overlay = document.getElementById('flyer-overlay');
+      if (overlay) {
+        overlay.style.display = 'none';
+      }
+    }
+  
+    // Función para redirigir a la URL del sorteo cuando se clickea el contenedor
+    function redirectToPromo() {
+      window.location.href = "https://www.dondeseria.com/sorteo/page_uf98.html";
+    }
+  
+    // Cierra el flyer automáticamente después de 3 segundos (3000 milisegundos)
+    window.addEventListener('load', function() {
+      setTimeout(closeFlyer, 3000);
+    });
   </script>
   
     <script type="importmap">
